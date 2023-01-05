@@ -14,6 +14,6 @@ TcpListener server = new TcpListener(IPAddress.Any,6379);
 server.Start();
 Socket socket = server.AcceptSocket();
 
-string respondingString = "PONG";
+string respondingString = "+PONG\r\n";
 Byte[] sendBytes = Encoding.ASCII.GetBytes(respondingString);
 int tmp = socket.Send(sendBytes);
