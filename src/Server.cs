@@ -22,7 +22,7 @@ Byte[] sendBytes = Encoding.ASCII.GetBytes(respondingString);
 
 byte[] buffer = new byte[256];
 int bytes;
-while((bytes = client.Receive(buffer)) > 0)
+while((bytes = socket.Receive(buffer)) > 0)
 {
-    socket.Send(respondingString);
+    socket.Send(sendBytes);
 }
