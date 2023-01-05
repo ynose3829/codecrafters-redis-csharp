@@ -1,3 +1,11 @@
+# 当リポジトリについて
+当リポジトリはcodecraftersのフォークで、個人の学習用です。
+srcフォルダ内に成果物が保存されています。
+
+
+
+
+
 ![progress-banner](https://app.codecrafters.io/progress/redis/55ab2956-c119-4b6c-8fa3-fbc97f71e867)
 
 This is a starting point for C# solutions to the
