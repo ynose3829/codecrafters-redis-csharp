@@ -12,14 +12,17 @@ Console.WriteLine("Logs from your program will appear here!");
 
 TcpListener server = new TcpListener(IPAddress.Any,6379);
 server.Start();
-//Socket socket = server.AcceptSocket();
 
+//wait for client
+Socket socket = server.AcceptSocket();
+
+//response
 string respondingString = "+PONG\r\n";
 Byte[] sendBytes = Encoding.ASCII.GetBytes(respondingString);
 
-// Enter the Listening loop.
-while(true)
+byte[] buffer = new byte[256];
+int bytes;
+while((bytes = client.Receive(buffer)) > 0)
 {
-    Socket socket = server.AcceptSocket();
-    int tmp = socket.Send(sendBytes);
+    socket.Send(respondingString);
 }
